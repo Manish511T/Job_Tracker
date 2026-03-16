@@ -80,7 +80,7 @@ const JobCard = ({ job, onDelete, onStatusChange, onResumeUpload, onResumeDelete
             <strong>📄 Resume Uploaded:</strong>
             <div className="resume-file-info">
               <a
-                href={`${process.env.REACT_APP_API_URL?.split('/api')[0] || 'http://localhost:5000'}${job.resumeFile.path}`}
+                href={`${(process.env.REACT_APP_API_URL || 'http://localhost:5000/api').replace('/api', '')}${job.resumeFile.path}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="resume-download-link"
