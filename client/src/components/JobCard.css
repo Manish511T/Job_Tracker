@@ -1,0 +1,232 @@
+.job-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.job-card-header {
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.job-card-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.job-card-header .role {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.delete-btn {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.delete-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.job-card-body {
+  padding: 20px;
+  flex: 1;
+  color: #666;
+  font-size: 14px;
+  overflow-y: auto;
+}
+
+.job-card-body p {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.job-card-body p {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.job-card-body strong {
+  color: #333;
+}
+
+.resume-file-section {
+  background-color: #e8f5e9;
+  padding: 12px;
+  border-radius: 6px;
+  border-left: 3px solid #28a745;
+  margin: 12px 0;
+}
+
+.resume-file-section strong {
+  color: #28a745;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.resume-file-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.resume-download-link {
+  flex: 1;
+  padding: 8px 12px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.resume-download-link:hover {
+  background-color: #218838;
+}
+
+.resume-delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s;
+}
+
+.resume-delete-btn:hover {
+  background-color: #c82333;
+}
+
+.resume-file-section small {
+  color: #666;
+  font-size: 12px;
+  display: block;
+}
+
+.resume-upload-section {
+  margin: 12px 0;
+  padding: 12px;
+  background-color: #f5f9ff;
+  border: 2px dashed #667eea;
+  border-radius: 6px;
+}
+
+.resume-upload-label {
+  display: block;
+  padding: 10px 12px;
+  background-color: #667eea;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.resume-upload-label:hover {
+  background-color: #764ba2;
+}
+
+.resume-upload-input {
+  display: none;
+}
+.notes {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-left: 3px solid #667eea;
+  border-radius: 3px;
+}
+
+.job-description p,
+.notes p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.job-card-footer {
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+}
+
+.status-select {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: border-color 0.3s;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.status-select.status-applied {
+  border-color: #ffc107;
+  color: #ffc107;
+}
+
+.status-select.status-interview {
+  border-color: #0dcaf0;
+  color: #0dcaf0;
+}
+
+.status-select.status-rejected {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.status-select.status-offer {
+  border-color: #198754;
+  color: #198754;
+}
+
+@media (max-width: 600px) {
+  .job-card-header {
+    align-items: flex-start;
+  }
+
+  .job-card-body {
+    font-size: 13px;
+  }
+}

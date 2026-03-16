@@ -1,0 +1,503 @@
+.smart-recall-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.smart-recall-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.smart-recall-btn:active {
+  transform: translateY(0);
+}
+
+.smart-recall-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 50px;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.smart-recall-modal {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.smart-recall-header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 12px 12px 0 0;
+}
+
+.smart-recall-header h2 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+}
+
+.smart-recall-header p {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.search-form button {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.search-form button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.search-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Self Introduction Section */
+.intro-section {
+  padding: 20px;
+  background: #f0f4ff;
+  border-bottom: 1px solid #ddd;
+}
+
+.intro-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.intro-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.edit-intro-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.edit-intro-btn:hover {
+  background: #764ba2;
+}
+
+.intro-display {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 3px solid #667eea;
+}
+
+.intro-display p {
+  margin: 0;
+  color: #555;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.intro-placeholder {
+  color: #999 !important;
+  font-style: italic;
+}
+
+.copy-intro-btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.copy-intro-btn:hover {
+  background: #764ba2;
+}
+
+.intro-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.intro-textarea {
+  padding: 10px;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+
+.intro-textarea:focus {
+  outline: none;
+  border-color: #764ba2;
+  box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1);
+}
+
+.save-intro-btn {
+  padding: 10px 16px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.save-intro-btn:hover {
+  background: #218838;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin: 0 20px;
+  margin-top: 10px;
+  border: 1px solid #f5c6cb;
+}
+
+.results-container {
+  padding: 20px;
+  min-height: 100px;
+}
+
+.no-results {
+  text-align: center;
+  color: #999;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+.recall-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.recall-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+  border-bottom: 2px solid #667eea;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-title h3 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.card-title .company {
+  margin: 0;
+  color: #667eea;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.status-badge.status-applied {
+  background: #ffc107;
+  color: #333;
+}
+
+.status-badge.status-interview {
+  background: #0dcaf0;
+  color: white;
+}
+
+.status-badge.status-rejected {
+  background: #dc3545;
+  color: white;
+}
+
+.status-badge.status-offer {
+  background: #198754;
+  color: white;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.meta-info {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  font-size: 13px;
+  color: #666;
+}
+
+.meta-item strong {
+  color: #333;
+}
+
+.brief-section {
+  margin-bottom: 15px;
+}
+
+.brief-section h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.brief-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.brief-list li {
+  padding: 8px 0;
+  color: #555;
+  font-size: 13px;
+  line-height: 1.5;
+  border-left: 3px solid #667eea;
+  padding-left: 12px;
+  margin-bottom: 8px;
+}
+
+.summary-section {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 3px solid #17a2b8;
+}
+
+.summary-section h4 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 13px;
+}
+
+.summary-section p {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.smart-recall-footer {
+  position: sticky;
+  bottom: 0;
+  background: #f5f5f5;
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+}
+
+.smart-recall-footer p {
+  margin: 0;
+}
+
+.smart-recall-footer strong {
+  color: #667eea;
+}
+
+/* Scrollbar styling */
+.smart-recall-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.smart-recall-modal::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.smart-recall-modal::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 4px;
+}
+
+.smart-recall-modal::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}
+
+@media (max-width: 600px) {
+  .smart-recall-overlay {
+    padding-top: 20px;
+  }
+
+  .smart-recall-modal {
+    max-width: 95%;
+    max-height: 90vh;
+  }
+
+  .smart-recall-header {
+    padding: 15px;
+  }
+
+  .smart-recall-header h2 {
+    font-size: 18px;
+  }
+
+  .smart-recall-header p {
+    display: none;
+  }
+
+  .close-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+
+  .card-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .status-badge {
+    align-self: flex-start;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .brief-list li {
+    font-size: 12px;
+  }
+}
+
